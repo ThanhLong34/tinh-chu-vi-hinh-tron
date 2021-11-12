@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      #radiusInput {
+         padding: 20px;
+      }
+   </style>
+</head>
+
+<body>
+   <div id="website" class="website">
+      <input id="radiusInput" type="text" class="input" placeholder="Nhập bán kính">
+      <h2 id="result"></h2>
+   </div>
+   <script>
+      const result = document.getElementById('result');
+      const input = document.getElementById('radiusInput');
+      input.oninput = function () {
+         result.innerHTML = parseInt(input.value) * 2 * Math.PI;
+      }
+   </script>
+</body>
+
+</html>
